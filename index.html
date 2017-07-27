@@ -21,7 +21,23 @@
     </style>
     </head>
     <body>
+      <script src="index.js"></script>
+      <!-- Open this file and call `mocha.run()` in console to run tests -->
+      <div id="mocha"></div>
+      <script src="node_modules/mocha/mocha.js"></script>
+      <script src="node_modules/expect/umd/expect.min.js"></script>
+      <script src="node_modules/sinon/pkg/sinon.js"></script>
+      <script>mocha.setup('bdd');</script>
+      <script src="test/index-test.js"></script>
+
+
+      <form class="" action="index.html" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" value="" id="username">
+        <button type="button" name="username" onclick="getRepositories()">Submit</button>
+      </form>
     <main id="main">
+
     </main>
     <div class="flexbox-container">
       <div>
@@ -33,12 +49,7 @@
         <div id="details"></div>
       </div>
     </div>
-    <script src="index.js"></script>
-    <!-- Open this file and call `mocha.run()` in console to run tests -->
-    <div id="mocha"></div>
-    <script src="node_modules/mocha/mocha.js"></script>
-    <script src="node_modules/expect/umd/expect.min.js"></script>
-    <script src="node_modules/sinon/pkg/sinon.js"></script>
-    <script>mocha.setup('bdd');</script>
+
+
   </body>
 </html>
